@@ -111,7 +111,7 @@ window:CreateButtonF1("Murder Mystery 2 (N4ri, Based off Vynixu's Script)", func
 end)
 
 window:CreateButtonF1("Flee The Facility (Unknown Developer)", function()
-	loadstring(game:HttpGet(('https://pastebinp.com/raw/0QQiQmdi'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/Flee%20The%20Facility'),true))()
 end)
 
 window:CreateButtonF1("Ninja Legends (Jxnt)", function()
