@@ -387,7 +387,7 @@ end
 		T1Button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 		T1Button.BorderSizePixel = 0
 		T1Button.Position = UDim2.new(0.0174999218, 0, 0, 0)
-		T1Button.Size = UDim2.new(0.927999973, 0, 0.0460000001, 0)
+		T1Button.Size = UDim2.new(0.927999973, 0, 0, 28)
 		T1Button.Selected = true
 		T1Button.Font = Enum.Font.Gotham
 		T1Button.Text = text
@@ -411,7 +411,7 @@ end
 		T2Button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 		T2Button.BorderSizePixel = 0
 		T2Button.Position = UDim2.new(0.0174999218, 0, 0, 0)
-		T2Button.Size = UDim2.new(0.927999973, 0, 0.0460000001, 0)
+		T2Button.Size = UDim2.new(0.927999973, 0, 0, 28)
 		T2Button.Selected = true
 		T2Button.Font = Enum.Font.Gotham
 		T2Button.Text = text
@@ -435,7 +435,7 @@ end
 		T3Button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 		T3Button.BorderSizePixel = 0
 		T3Button.Position = UDim2.new(0.0174999218, 0, 0, 0)
-		T3Button.Size = UDim2.new(0.927999973, 0, 0.0460000001, 0)
+		T3Button.Size = UDim2.new(0.927999973, 0, 0, 28)
 		T3Button.Selected = true
 		T3Button.Font = Enum.Font.Gotham
 		T3Button.Text = text
