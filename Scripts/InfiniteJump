@@ -1,0 +1,26 @@
+local Mouse = game.Players.LocalPlayer:GetMouse()
+local InfiniteJump = false
+
+Mouse.KeyDown:Connect(function(k)
+	if k == "v" then
+		if InfiniteJump == false then
+			InfiniteJump = true
+		else
+			InfiniteJump = false
+		end	
+	end
+end)
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJump == true then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Infinite Jump [V]";
+	Text = "Press V to toggle InfiniteJump.";
+	Icon = "http://www.roblox.com/asset/?id=5114892367";
+	Duration = 10;
+	Button1 = "OK";
+})

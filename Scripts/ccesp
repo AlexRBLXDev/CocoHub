@@ -1,0 +1,26 @@
+--[[
+
+          _              _               _           _            _      
+        /\ \           /\ \             /\ \        / /\         /\ \    
+       /  \ \         /  \ \           /  \ \      / /  \       /  \ \   
+      / /\ \ \       / /\ \ \         / /\ \ \    / / /\ \__   / /\ \ \  
+     / / /\ \ \     / / /\ \ \       / / /\ \_\  / / /\ \___\ / / /\ \_\ 
+    / / /  \ \_\   / / /  \ \_\     / /_/_ \/_/  \ \ \ \/___// / /_/ / / 
+   / / /    \/_/  / / /    \/_/    / /____/\      \ \ \     / / /__\/ /  
+  / / /          / / /            / /\____\/  _    \ \ \   / / /_____/   
+ / / /________  / / /________    / / /______ /_/\__/ / /  / / /          
+/ / /_________\/ / /_________\  / / /_______\\ \/___/ /  / / /           
+\/____________/\/____________/  \/__________/ \_____\/   \/_/            
+
+CC ESP is a universal ESP made to work with 90% of games, it has Toggle, Manual and Auto-Refresh, the ESP is completely
+Open Sourced and is based off an MM2 ESP. This ESP is included with Coco Z3.
+
+]]--
+
+local place = game.PlaceId
+
+if place == 142823291 then
+	loadstring(game:HttpGet(('https://gitlab.com/cccontrol/cccontrol/-/raw/master/CCMM2ESP'),true))()
+else
+	loadstring(game:HttpGet(('https://gitlab.com/cccontrol/cccontrol/-/raw/master/ccuniversalesp'),true))()
+end

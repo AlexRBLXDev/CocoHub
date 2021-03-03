@@ -1,0 +1,41 @@
+local XRayToggle = false
+local Mouse = game.Players.LocalPlayer:GetMouse()
+local obj = game.workspace
+
+function XrayOn(obj) --Enables xray
+	for _,v in pairs(obj:GetChildren()) do
+		if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+			v.LocalTransparencyModifier = 0.75
+		end
+		XrayOn(v)
+	end
+end
+
+function XrayOff(obj) --Disables xray
+	for _,v in pairs(obj:GetChildren()) do
+		if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+			v.LocalTransparencyModifier = 0
+		end XrayOff(v)
+	end
+end
+
+Mouse.KeyDown:Connect(function(k)
+	if k == "l" then
+		if XRayToggle == false then
+			XRayToggle = true
+			XrayOn(obj)
+		else
+			XRayToggle = false
+			XrayOff(obj)
+		end
+	end	
+end)
+
+
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "CC X-Ray [L]";
+	Text = "Press L to Toggle X-Ray (Tell me if that Key-Bind affects anything).";
+	Icon = "http://www.roblox.com/asset/?id=5114892367";
+	Duration = 10;
+	Button1 = "OK";
+})

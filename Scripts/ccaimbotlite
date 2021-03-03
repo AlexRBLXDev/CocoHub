@@ -1,0 +1,240 @@
+local gui_hide_button = {Enum.KeyCode.LeftControl, "h"}
+local plrs = game:GetService("Players")
+local lplr = game:GetService("Players").LocalPlayer
+local TeamBased = true ; local teambasedswitch = "o"
+local presskeytoaim = true; local aimkey = "e"
+aimbothider = false; aimbothiderspeed = .5
+local Aim_Assist = false ; Aim_Assist_Key = {Enum.KeyCode.LeftControl, "z"}
+local abs = math.abs
+local mouselock = false
+local canaimat = true
+local lockaim = true; local lockangle = 5
+local ver = "2"
+local cam = game.Workspace.CurrentCamera
+local BetterDeathCount = true
+
+
+local mouse = lplr:GetMouse()
+local switch = false
+local key = "k"
+local aimatpart = nil
+
+-- Scripts:
+local uis = game:GetService("UserInputService")
+local bringall = false
+local hided2 = false
+mouse.KeyDown:Connect(function(a)
+	if a == "u" then
+		--print("worked1")
+		if mouselock == false then
+			mouselock = true
+		else
+			mouselock = false
+		end
+	elseif a == "y" then
+		if aimbothider == false then
+			aimbothider = true
+			if aimbothider == true then
+				return
+			end
+		end
+	elseif a == Aim_Assist_Key[2] and uis:IsKeyDown(Aim_Assist_Key[1]) then
+		if Aim_Assist == true then
+			Aim_Assist = false
+			--print("disabled")
+		else
+			Aim_Assist = true
+		end
+	end
+	if a == "j" then
+		if mouse.Target then
+			mouse.Target:Destroy()
+		end
+	end
+	if a == key then
+		if switch == false then
+			switch = true
+		else
+			switch = false
+			if aimatpart ~= nil then
+				aimatpart = nil
+			end
+		end
+	elseif a == teambasedswitch then
+		if TeamBased == true then
+			TeamBased = false
+		else
+			TeamBased = true
+		end
+	elseif a == aimkey then
+		if not aimatpart then
+			local maxangle = math.rad(20)
+			for i, plr in pairs(plrs:GetChildren()) do
+				if plr.Name ~= lplr.Name and plr.Character and plr.Character.Head and plr.Character.Humanoid and plr.Character.Humanoid.Health > 1 then
+					if TeamBased == true then
+						if plr.Team.Name ~= lplr.Team.Name then
+							local an = checkfov(plr.Character.Head)
+							if an < maxangle then
+								maxangle = an
+								aimatpart = plr.Character.Head
+							end
+						end
+					else
+						local an = checkfov(plr.Character.Head)
+						if an < maxangle then
+							maxangle = an
+							aimatpart = plr.Character.Head
+						end
+						--print(plr)
+					end
+					local old = aimatpart
+					plr.Character.Humanoid.Died:Connect(function()
+						--print("died")
+						if aimatpart and aimatpart == old then
+							aimatpart = nil
+						end
+					end)
+					
+				end
+			end
+		else
+			aimatpart = nil
+			canaimat = false
+			delay(1.1, function()
+				canaimat = true
+			end)
+		end
+	end
+end)
+
+function getfovxyz (p0, p1, deg)
+	local x1, y1, z1 = p0:ToOrientation()
+	local cf = CFrame.new(p0.p, p1.p)
+	local x2, y2, z2 = cf:ToOrientation()
+	local d = math.deg
+	if deg then
+		return Vector3.new(d(x1-x2), d(y1-y2), d(z1-z2))
+	else
+		return Vector3.new((x1-x2), (y1-y2), (z1-z2))
+	end
+end
+
+
+function aimat(part)
+	if part then
+		if aimbothider == true or Aim_Assist == true then
+			cam.CFrame = cam.CFrame:Lerp(CFrame.new(cam.CFrame.p, part.CFrame.p), aimbothiderspeed)
+		else
+			
+			cam.CFrame = CFrame.new(cam.CFrame.p, part.CFrame.p)
+		end
+	end
+end
+function checkfov (part)
+	local fov = getfovxyz(game.Workspace.CurrentCamera.CFrame, part.CFrame)
+	local angle = math.abs(fov.X) + math.abs(fov.Y)
+	return angle
+end
+pcall(function()
+	delay(0, function()
+		while wait(.4) do
+			if Aim_Assist and not aimatpart and canaimat and lplr.Character and lplr.Character.Humanoid and lplr.Character.Humanoid.Health > 0 then
+				for i, plr in pairs(plrs:GetChildren()) do
+					
+					
+					local minangle = math.rad(5.5)
+					local lastpart = nil
+					local function gg(plr)
+						pcall(function()
+							if plr.Name ~= lplr.Name and plr.Character and plr.Character.Humanoid and plr.Character.Humanoid.Health > 0 and plr.Character.Head then
+								local raycasted = false
+								local cf1 = CFrame.new(cam.CFrame.p, plr.Character.Head.CFrame.p) * CFrame.new(0, 0, -4)
+								local r1 = Ray.new(cf1.p, cf1.LookVector * 9000)
+								local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+								local dist = (plr.Character.Head.CFrame.p- pos).magnitude
+								if dist < 4 then
+									raycasted = true
+								end
+								if raycasted == true then
+									local an1 = getfovxyz(cam.CFrame, plr.Character.Head.CFrame)
+									local an = abs(an1.X) + abs(an1.Y)
+									if an < minangle then
+										minangle = an
+										lastpart = plr.Character.Head
+									end
+								end
+							end
+						end)
+					end
+					if TeamBased then
+						if plr.Team.Name ~= lplr.Team.Name then
+							gg(plr)
+						end
+					else
+						gg(plr)
+					end
+					--print(math.deg(minangle))
+					if lastpart then
+						aimatpart = lastpart
+						aimatpart.Parent.Humanoid.Died:Connect(function()
+							if aimatpart == lastpart then
+								aimatpart = nil
+							end
+						end)
+						
+					end
+				end
+			end
+		end
+	end)
+end)
+local oldheadpos
+local lastaimapart
+game:GetService("RunService").RenderStepped:Connect(function()
+	if aimatpart and lplr.Character and lplr.Character.Head then
+		if BetterDeathCount and lastaimapart and lastaimapart == aimatpart then
+			local dist = (oldheadpos - aimatpart.CFrame.p).magnitude
+			if dist > 40 then
+				aimatpart = nil
+			end
+		end
+		lastaimapart = aimatpart
+		oldheadpos = lastaimapart.CFrame.p
+		do
+			if aimatpart.Parent == plrs.LocalPlayer.Character then
+				aimatpart = nil
+			end
+			aimat(aimatpart)
+			pcall(function()
+				if Aim_Assist == true then
+					local cf1 = CFrame.new(cam.CFrame.p, aimatpart.CFrame.p) * CFrame.new(0, 0, -4)
+					local r1 = Ray.new(cf1.p, cf1.LookVector * 1000)
+					local obj, pos = game.Workspace:FindPartOnRayWithIgnoreList(r1,  {lplr.Character.Head})
+					local dist = (aimatpart.CFrame.p- pos).magnitude
+					if obj then
+						--print(obj:GetFullName())
+					end
+					if not obj or dist > 6 then
+						aimatpart = nil
+						--print("ooof")
+					end
+					canaimat = false
+					delay(.5, function()
+						canaimat = true
+					end)
+				end
+			end)
+		end
+		
+		
+		
+	end
+end)
+
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "CC Aimbot Lite";
+	Text = "Press E to Aim, Press O to toggle TeamCheck.";
+	Icon = "http://www.roblox.com/asset/?id=5114892367";
+	Duration = 10;
+	Button1 = "OK";
+})

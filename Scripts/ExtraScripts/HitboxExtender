@@ -1,0 +1,58 @@
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Hitbox Extender";
+	Text = "Press P to Toggle Hitbox Extender. [NOTE] Sometimes, Hitbox Extender may cause Collision to be problematic.";
+	Icon = "http://www.roblox.com/asset/?id=5114892367";
+	Duration = 10;
+	Button1 = "OK";
+})
+
+local HitboxToggle = true
+local Mouse = game.Players.LocalPlayer:GetMouse()
+
+local plrs = game:GetService("Players")
+local LP = game:GetService("Players").LocalPlayer
+function ExtendHitbox()
+	for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+		if v.Name ~= LP.Name and v.Character.UpperTorso.Color ~= LP.Character.UpperTorso.Color then
+			v.Character.LowerTorso.CanCollide = false
+			v.Character.LowerTorso.Material = "Neon"
+			v.Character.LowerTorso.Transparency = 0.95
+			v.Character.LowerTorso.Size = Vector3.new(15, 15, 15)
+			v.Character.HumanoidRootPart.Size = Vector3.new(15, 15, 15)
+		end
+	end
+end
+
+function NormalHitbox()
+	for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+		if v.Name ~= LP.Name and v.Character.UpperTorso.Color ~= LP.Character.UpperTorso.Color then
+			v.Character.LowerTorso.CanCollide = false
+			v.Character.LowerTorso.Material = "Neon"
+			v.Character.LowerTorso.Transparency = 0.95
+			v.Character.LowerTorso.Size = Vector3.new(2, 0.4, 1)
+			v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
+		end
+	end
+end
+
+Mouse.KeyDown:Connect(function(k)
+	if k == "p" then
+		if HitboxToggle == false then
+			HitboxToggle = true
+			pcall(ExtendHitbox)
+		else
+			HitboxToggle = false
+			wait(1)
+			pcall(NormalHitbox)
+		end
+	end
+end)
+
+pcall(ExtendHitbox)
+
+while wait(1) do
+	if HitboxToggle == true then
+		pcall(ExtendHitbox)
+	end
+end
+
