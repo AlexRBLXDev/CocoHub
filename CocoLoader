@@ -115,7 +115,7 @@ LoadBar.Size = UDim2.new(0, 0, 0, 7)
 local function MNQEF_fake_script()
 	local script = Instance.new('LocalScript', MainFrame)
 
-	wait(5)
+	wait(1)
 	script.Parent:TweenSize(UDim2.new(0,310,0,158), "Out", "Quad", 0.5, true)
 	wait(1)
 	script.Parent.LoadBar:TweenSize(UDim2.new(0.1,0,0,7), "Out", "Quad", 0.5, true)
