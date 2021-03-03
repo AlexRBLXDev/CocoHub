@@ -70,7 +70,7 @@ window:CreateButtonF1("Phantom Forces (EHub)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EHUBWINNING/KRNL/window/Script.lua'),true))()
 end)
 
-window:CreateButtonF1("KAT! (Lime X)", function()
+window:CreateButtonF1("KAT! (Modded Lime X)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/LimeXKAT'),true))()
 end)
 
