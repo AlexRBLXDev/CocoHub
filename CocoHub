@@ -285,7 +285,7 @@ end)
 
 -- Universal Scripts
 
-window:CreateButtonF2("Owl Hub", function()
+window:CreateButtonF3("Owl Hub", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt'), true))()
 end)
 
