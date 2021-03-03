@@ -1,1 +1,243 @@
+--[[
 
+          _             _             _             _             _              _      
+        /\ \           /\ \         /\ \           /\ \         /\ \           /\ \     
+       /  \ \         /  \ \       /  \ \         /  \ \       /  \ \         /  \ \    
+      / /\ \ \       / /\ \ \     / /\ \ \       / /\ \ \     / /\ \ \       / /\ \ \   
+     / / /\ \ \     / / /\ \ \   / / /\ \ \     / / /\ \ \   / / /\ \ \     / / /\ \ \  
+    / / /  \ \_\   / / /  \ \_\ / / /  \ \_\   / / /  \ \_\ / / /  \ \_\   / / /  \ \_\ 
+   / / /    \/_/  / / /   / / // / /    \/_/  / / /   / / // / /    \/_/  / / /    \/_/ 
+  / / /          / / /   / / // / /          / / /   / / // / /          / / /          
+ / / /________  / / /___/ / // / /________  / / /___/ / // / /________  / / /________   
+/ / /_________\/ / /____\/ // / /_________\/ / /____\/ // / /_________\/ / /_________\  
+\/____________/\/_________/ \/____________/\/_________/ \/____________/\/____________/  
+
+
+A Script Hub by N4ri aimed at making Scripts easy to find.
+
+
+]]--
+
+local lib = loadstring(game:HttpGet(('https://gitlab.com/cococc/cocoscripthub/-/raw/master/CocoLib'),true))()
+local window = lib:CreateWindow()
+
+-- Game Scripts --
+
+window:CreateButtonF1("Arsenal (Dark Hub)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init'), true))()
+end)
+
+window:CreateButtonF1("Jailbreak (Vynixu's)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Jailbreak'),true))()
+end)
+
+window:CreateButtonF1("Murder Mystery 2 (Eclipse MM2)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script'),true))()
+end)
+
+window:CreateButtonF1("Build a Boat for Treasure (Toxic Mods)", function()
+	loadstring(game:HttpGet(("https://toxicmods.mattlawz.xyz/scripts/buildaboat.lua"), true))()
+end)
+
+window:CreateButtonF1("Pistol 1V1 (Joe22)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/joe22-cool/Pistol_1v1/window/Script.lua"))()
+end)
+
+window:CreateButtonF1("Prison Life (Vynixu's)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Prison%20Life"))()
+end)
+
+window:CreateButtonF1("The Wild West (Lace)", function()
+	loadstring(game:HttpGet('https://pastebinp.com/raw/gGtYE8mc'))()
+end)
+
+window:CreateButtonF1("Shindo (Mhee Hub)", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/Av8NMSSq",true))()
+end)
+
+window:CreateButtonF1("Amongst Us (Psykek)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Psykek66/eee/main/AUGUI.txt", true))()
+end)
+
+window:CreateButtonF1("Phantom Forces (EHub)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EHUBWINNING/KRNL/window/Script.lua'),true))()
+end)
+
+window:CreateButtonF1("KAT! (Lime X)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/LimeXKAT'),true))()
+end)
+
+window:CreateButtonF1("Ragdoll Engine (Vynixu's)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Ragdoll%20Engine'),true))()
+end)
+
+window:CreateButtonF1("Strucid (Project Evolution)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Project-Evolution/Main/main/Loader.lua", true))()
+end)
+
+window:CreateButtonF1("SharkBite (Unknown Developer)", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/YYVLbzVg", true))()
+end)
+
+window:CreateButtonF1("SharkBite (Pepsi Byte)", function()
+	loadstring(game:GetObjects("rbxassetid://3623753581")[1].Source)()
+end)
+
+window:CreateButtonF1("Unit Classified (LittleDyingDuck)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LittleDyingDuck/UnitClassified/master/unit.lua"))()
+end)
+
+window:CreateButtonF1("Nerf FPS (Redo Hub)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RedoGaming/RedoHub/main/script'),true))()
+end)
+
+window:CreateButtonF1("PolyBattle (Redo Hub)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RedoGaming/RedoHub/main/script'),true))()
+end)
+
+window:CreateButtonF1("Word Bomb (N4ri, Based off AngelD23's Script)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/Unpatchabomb/master/Unpatchabomb'),true))()
+end)
+
+window:CreateButtonF1("Murder Mystery 2 (N4ri, Based off Vynixu's Script)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
+end)
+
+window:CreateButtonF1("Flee The Facility (Unknown Developer)", function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/0QQiQmdi'),true))()
+end)
+
+window:CreateButtonF1("Ninja Legends (Jxnt)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/NinjaLegends'),true))()
+end)
+
+window:CreateButtonF1("Ninja Legends 2 (Orion)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LaDamage/Obfuscated/main/NinjaLegends2.lua" ,true))()
+end)
+
+window:CreateButtonF1("De Pride Isle Sanatorium (Unknown Developer)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/DivineSisters" ,true))()
+end)
+
+window:CreateButtonF1("Hide and Seek Extreme (Zyrex)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
+end)
+
+window:CreateButtonF1("D-DAY (Project Ripple)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3",true))()
+end)
+
+-- Hubs --
+
+window:CreateButtonF2("Dark Hub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init'), true))()
+end)
+
+window:CreateButtonF2("Duck Hub", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/NougatBitz/DuckHub/master/window.lua'))()
+end)
+
+window:CreateButtonF2("Owl Hub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt'), true))()
+end)
+
+window:CreateButtonF2("Redo Hub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RedoGaming/RedoHub/window/script'),true))()
+end)
+
+window:CreateButtonF2("Kraken Hub", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
+end)
+
+window:CreateButtonF2("Oxie Hub", function()
+	loadstring(game:HttpGet(('https://github.com/MarsQQ/ScriptHubScripts/blob/master/OxieHub'),true))()
+end)
+
+window:CreateButtonF2("Zyrex Hub", function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/ZyrexHub"),true))()
+end)
+
+window:CreateButtonF2("EHub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EHUBWINNING/KRNL/window/Script.lua'),true))()
+end)
+
+window:CreateButtonF2("Mhee Hub", function()
+	loadstring(game:HttpGet("https://pastebinp.com/raw/Av8NMSSq",true))()
+end)
+
+window:CreateButtonF2("Bruh Hub", function()
+	loadstring(game:HttpGet("https://bruh.keshhub.com/main.lua"))()
+end)
+
+window:CreateButtonF2("Project Evolution", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Project-Evolution/Main/main/Loader.lua", true))()
+end)
+
+window:CreateButtonF2("Cattoware", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/CatzCode/cat/main/Cattoware.lua'))()
+end)
+
+window:CreateButtonF2("ReeHub", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/botdevXD/ReeHub/main/ReeHub.lua", true))()
+end)
+
+window:CreateButtonF2("Ez Hub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+end)
+
+window:CreateButtonF2("Fathom Hub", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+end)
+
+window:CreateButtonF2("A.I Hub", function()
+	pcall(function()
+		local content = game:HttpGet("https://raw.githubusercontent.com/ClairSonata/A.I-Hub/main/Intro.lua")
+		assert(loadstring(content))()
+	end)
+end)
+
+-- Universal Scripts
+
+window:CreateButtonF2("Owl Hub", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt'), true))()
+end)
+
+window:CreateButtonF3("CMD-X", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+window:CreateButtonF3("Infinite Yield", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+window:CreateButtonF3("Reviz Admin", function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/Hv2BEncA'),true))()
+end)
+
+window:CreateButtonF3("Invisible Fling", function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Denverrz/scripts/master/Invisible_Fling_Revamp.lua"),true))()
+end)
+
+window:CreateButtonF3("Click TP Tool", function()
+	loadstring(game:HttpGet(('https://gitlab.com/cccontrol/cccontrol/-/raw/master/ExtraScripts/ClickTPTool'),true))()
+end)
+
+window:CreateButtonF3("Dex V2", function()
+	loadstring(game:HttpGet("https://gitlab.com/cccontrol/cccontrol/-/raw/master/ExtraScripts/DexV2"))
+end)
+
+window:CreateButtonF3("Dark Dex", function()
+	loadstring(game:HttpGet(('https://gitlab.com/cccontrol/cccontrol/-/raw/master/ExtraScripts/DarkDex'),true))()
+end)
+
+window:CreateButtonF3("R15 GUI", function()
+	loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()
+end)
+
+window:CreateButtonF3("ChetBypasser", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/bedra45/chetbypasser/main/chetbypass'),true))()
+end)
+
+window:CreateButtonF3("OPFinality", function()
+	loadstring(game:HttpGet(('https://gitlab.com/cccontrol/cccontrol/-/raw/master/ExtraScripts/OPFinality'),true))()
+end)
