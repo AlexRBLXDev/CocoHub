@@ -237,7 +237,7 @@ local function BCYGOT_fake_script() -- MainFrame.MainScript
 	local buttonmenu = script.Parent.ButtonMenu
 	local Minimized = false
 	
-	wait(1)
+	wait(0.5)
 	script.Parent:TweenPosition(UDim2.new(0.5,0,0.5,0), "Out", "Quad", 0.5, true)
 	
 	function UpdateResults()
