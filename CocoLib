@@ -82,6 +82,7 @@ TFrame2.BorderSizePixel = 0
 TFrame2.Position = UDim2.new(1.5, 0, 0.166999996, 0)
 TFrame2.Size = UDim2.new(1, 0, 0.781967223, 0)
 TFrame2.ScrollBarThickness = 6
+TFrame2.CanvasSize = UDim2.new(0, 0, 5, 0)
 
 UIListLayout.Parent = TFrame2
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -112,6 +113,7 @@ TFrame3.BorderSizePixel = 0
 TFrame3.Position = UDim2.new(1.5, 0, 0.166999996, 0)
 TFrame3.Size = UDim2.new(1, 0, 0.781967223, 0)
 TFrame3.ScrollBarThickness = 6
+TFrame3.CanvasSize = UDim2.new(0, 0, 5, 0)
 
 UIListLayout_2.Parent = TFrame3
 UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
