@@ -129,12 +129,12 @@ TFrame1.BorderSizePixel = 0
 TFrame1.Position = UDim2.new(0.49999997, 0, 0.167032808, 0)
 TFrame1.Size = UDim2.new(1, 0, 0.781967223, 0)
 TFrame1.ScrollBarThickness = 6
-TFrame1.CanvasSize = UDim2.new(0, 0, 5, 0)
+TFrame1.CanvasSize = UDim2.new(0, 0, 10, 0)
 
 UIListLayout_3.Parent = TFrame1
 UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_3.Padding = UDim.new(0.00499999989, 0)
+UIListLayout_3.Padding = UDim.new(0.0025, 0)
 
 SideBar.Name = "SideBar"
 SideBar.Parent = MainFrame
@@ -236,8 +236,8 @@ local function BCYGOT_fake_script() -- MainFrame.MainScript
 	local searchBar = script.Parent.ButtonMenu.SearchBox
 	local buttonmenu = script.Parent.ButtonMenu
 	local Minimized = false
-	
-	wait(0.5)
+		
+		wait(0.5)
 	script.Parent:TweenPosition(UDim2.new(0.5,0,0.5,0), "Out", "Quad", 0.5, true)
 	
 	function UpdateResults()
