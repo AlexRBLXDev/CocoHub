@@ -133,7 +133,7 @@ TFrame1.CanvasSize = UDim2.new(0, 0, 10, 0)
 
 UIListLayout_3.Parent = TFrame1
 UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.SortOrder = Enum.SortOrder.Name
 UIListLayout_3.Padding = UDim.new(0.0025, 0)
 
 SideBar.Name = "SideBar"
