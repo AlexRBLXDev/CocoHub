@@ -42,6 +42,18 @@ window:CreateButtonF1("Murder Mystery 2 (Eclipse MM2)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script'),true))()
 end)
 
+window:CreateButtonF1("Murder Mystery 2 (Vynixu's)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20MM2", true))()
+end)
+
+window:CreateButtonF1("Speed Run 4 (Vynixu's)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Speed%20Run%204", true))()
+end)
+
+window:CreateButtonF1("Tower of Hell (Vynixu's)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Tower%20of%20Hell", true))()
+end)
+
 window:CreateButtonF1("Build a Boat for Treasure (Toxic Mods)", function()
 	loadstring(game:HttpGet(("https://toxicmods.mattlawz.xyz/scripts/buildaboat.lua"), true))()
 end)
@@ -207,6 +219,18 @@ end)
 
 window:CreateButtonF1("Murder Mystery 3 (ecez#9573)", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/EntityStrike/MM3-EntityStrike/main/MM3-EntityStrike-Script"))()
+end)
+
+window:CreateButtonF1("BloxBurg (AutoFarm, Unknown Developer)", function()
+	loadstring(game:HttpGet("http://f1f46a0dd759fdae.paste.se/raw"))()
+end)
+
+window:CreateButtonF1("Breaking Point (asgar)", function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/MLPypHYv', true))()
+end)
+
+window:CreateButtonF1("Breaking Point (Crap GUI V1)", function()
+	loadstring(game:GetObjects("rbxassetid://1014703659")[1].Source)()
 end)
 
 -- Hubs --
