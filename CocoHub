@@ -145,6 +145,10 @@ window:CreateButtonF1("A Bizzare Journey (A.I Hub)", function()
 	end)
 end)
 
+window:CreateButtonF1("A Bizzare Journey (BimbusCoder)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Roblox-Scripts/master/ABJ", true))()
+end)
+
 window:CreateButtonF1("Ro-Ghoul (z4gs)", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/z4gs/scripts/master/Ro-Ghoul%20Auto%20Farm.lua",true))()
 end)
@@ -201,6 +205,9 @@ window:CreateButtonF1("Notoriety (oofNotoriety)", function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/RPCYGzpu",true))()
 end)
 
+window:CreateButtonF1("Murder Mystery 3 (ecez#9573)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EntityStrike/MM3-EntityStrike/main/MM3-EntityStrike-Script"))()
+end)
 
 -- Hubs --
 
