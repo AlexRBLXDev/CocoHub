@@ -233,7 +233,28 @@ window:CreateButtonF1("Breaking Point (Crap GUI V1)", function()
 	loadstring(game:GetObjects("rbxassetid://1014703659")[1].Source)()
 end)
 
+window:CreateButtonF1("Azure Mines (90467)", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/AzureMines', true))()
+end)
+
+window:CreateButtonF1("Adopt Me (BloxiYT)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/BloxHub/main/BloxHubMain", true))()
+end)
+
+window:CreateButtonF1("Elemental Battlegrounds (Kiraraa)", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/jyFwppd1", true))()
+end)
+
+window:CreateButtonF1("Sound Space (Owl Hub)", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt'), true))()
+end)
+
+
 -- Hubs --
+
+window:CreateButtonF2("Cattoware", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/CatzCode/cat/main/Cattoware.lua'))()
+end)
 
 window:CreateButtonF2("Domain Hub V2", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domain/main/source'),true))()
