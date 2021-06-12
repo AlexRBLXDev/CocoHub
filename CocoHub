@@ -34,8 +34,16 @@ window:CreateButtonF1("Arsenal (Dark Hub)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init'), true))()
 end)
 
-window:CreateButtonF1("Jailbreak (Vynixu's)", function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Jailbreak'),true))()
+window:CreateButtonF1("Jailbreak (Panther Hub)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Splooshhy/PantherHub/main/main/sexy/script.lua"))()
+	setclipboard("https://discord.gg/YgvrgEjQ8G")
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "Coco Hub";
+		Text = "This Script requires a key, i've copied the discord link for you, paste the link into your browser.";
+		Icon = "http://www.roblox.com/asset/?id=5114892367";
+		Duration = 10;
+		Button1 = "OK";
+	})
 end)
 
 window:CreateButtonF1("Murder Mystery 2 (Eclipse MM2)", function()
@@ -44,6 +52,10 @@ end)
 
 window:CreateButtonF1("Murder Mystery 2 (Vynixu's)", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20MM2", true))()
+end)
+
+window:CreateButtonF1("Murder Mystery 2 (Drifter0507)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifter0507/mm2/main/mm2", true))()
 end)
 
 window:CreateButtonF1("Speed Run 4 (Vynixu's)", function()
@@ -78,12 +90,12 @@ window:CreateButtonF1("Amongst Us (Psykek)", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Psykek66/eee/main/AUGUI.txt", true))()
 end)
 
-window:CreateButtonF1("Phantom Forces (EHub)", function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EHUBWINNING/KRNL/window/Script.lua'),true))()
-end)
-
 window:CreateButtonF1("KAT! (Modded Lime X)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/LimeXKAT'),true))()
+end)
+
+window:CreateButtonF1("Assassin (bockatta)", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/bockatta/Atta/main/Assassin%20Shitter'))();
 end)
 
 window:CreateButtonF1("Ragdoll Engine (Vynixu's)", function()
@@ -146,8 +158,8 @@ window:CreateButtonF1("D-DAY (Project Ripple)", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iQAIRHUB/Project-Ripple/main/D-DAY/V3.0.3",true))()
 end)
 
-window:CreateButtonF1("Welcome to Bloxburg (Alpha X Hub)", function()
-	loadstring(game:HttpGet("https://pastebinp.com/raw/z6TfDmqP",true))()
+window:CreateButtonF1("Welcome to Bloxburg (Dark Hub)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init",true))()
 end)
 
 window:CreateButtonF1("A Bizzare Journey (A.I Hub)", function()
@@ -238,7 +250,8 @@ window:CreateButtonF1("Azure Mines (90467)", function()
 end)
 
 window:CreateButtonF1("Adopt Me (BloxiYT)", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/BloxHub/main/BloxHubMain", true))()
+	_G.SubToBloxiScripts = false
+	loadstring(game:HttpGet("https://bloxhub.xyz/script/loader"))()
 end)
 
 window:CreateButtonF1("Elemental Battlegrounds (Kiraraa)", function()
@@ -249,11 +262,38 @@ window:CreateButtonF1("Sound Space (Owl Hub)", function()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/OwlHub.txt'), true))()
 end)
 
+window:CreateButtonF1("Funky Friday (Wally)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/main.lua",true))()
+end)
+
+window:CreateButtonF1("King Legacy (Sky Hub)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/crack/main/skyhub"))()
+end)
+
+window:CreateButtonF1("Bed Wars (DiamondHands)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DiamondHands-Exploit/BedWarsExploit/main/Source.lua"))()
+end)
+
+window:CreateButtonF1("Islands (DiamondHands)", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/DiamondHands-Exploit/BedWarsExploit/main/Source.lua"))()
+end)
 
 -- Hubs --
 
-window:CreateButtonF2("Cattoware", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/CatzCode/cat/main/Cattoware.lua'))()
+window:CreateButtonF2("Pika Hub", function()
+	loadstring(game:HttpGet("https://pika-cheat.cc/script.lua"))();
+end)
+
+window:CreateButtonF2("Panther Hub", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Splooshhy/PantherHub/main/main/sexy/script.lua"))()
+	setclipboard("https://discord.gg/YgvrgEjQ8G")
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "Coco Hub";
+		Text = "This Script requires a key, i've copied the discord link for you, paste the link into your browser.";
+		Icon = "http://www.roblox.com/asset/?id=5114892367";
+		Duration = 10;
+		Button1 = "OK";
+	})
 end)
 
 window:CreateButtonF2("Domain Hub V2", function()
@@ -305,7 +345,7 @@ window:CreateButtonF2("Mhee Hub", function()
 end)
 
 window:CreateButtonF2("Bruh Hub", function()
-	loadstring(game:HttpGet("https://bruh.keshhub.com/main.lua"))()
+	loadstring(game:HttpGet("https://bruh.keshsenpai.com/.lua"))()
 end)
 
 window:CreateButtonF2("Project Evolution", function()
